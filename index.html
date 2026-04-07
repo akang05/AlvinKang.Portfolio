@@ -1,28 +1,57 @@
 <nav>
-    <div><strong>Alvin Kang</strong></div>
-    <div>
-        <a href="#projects" style="margin-left: 20px;">Work</a>
-        <a href="mailto:alvinkang758@gmail.com" style="margin-left: 20px;">Contact</a>
-        <a href="mailto:kang540@purdue.edu" style="margin-left: 20px;">Contact</a>
+    <div class="logo"><strong>ALVIN.</strong></div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#ux-design">UX Design</a>
+        <a href="#web-dev">Web Apps</a>
+        <a href="mailto:your-email@purdue.edu">Contact</a>
     </div>
 </nav>
 
-<header class="hero">
-    <h1>Building digital <br>experiences at Purdue.</h1>
-    <p>Developing full-stack applications with a focus on clean code, interactive data visualizations, and user-centered design.</p>
+<header id="about" class="about-hero">
+    <div class="about-text">
+        <h1>Building for the User. <br>Coding for the Future.</h1>
+        <p>I'm a Web Design student at Purdue specializing in the intersection of <strong>UX Research</strong> and <strong>Full-Stack Development</strong>. I transform complex data into intuitive human experiences.</p>
+    </div>
+    <div class="about-image">
+        <img src="assets/me.jpg" alt="Alvin's Portrait" class="profile-pic">
+    </div>
 </header>
 
-<section id="projects">
-    <div class="project-grid">
-        <div class="card">
-            <span class="tag">React</span>
-            <h3>Keep Lite</h3>
-            <p>A note-taking app recreation featuring real-time search and persistent storage.</p>
+<main>
+    <section id="ux-design">
+        <h2 class="section-title">UX Design Case Studies</h2>
+        <div class="project-grid">
+            <div class="card ux-card">
+                <span class="tag">UX Research</span>
+                <h3>Starbucks App Redesign</h3>
+                <p>Heuristic evaluation and user flow optimization to reduce friction in the mobile ordering process.</p>
+                <a href="#" class="view-link">View Case Study →</a>
+            </div>
+            <div class="card ux-card">
+                <span class="tag">Prototyping</span>
+                <h3>Student Productivity App</h3>
+                <p>Designed a task-management ecosystem for college students based on 1:1 user interviews and storyboarding.</p>
+                <a href="#" class="view-link">View Case Study →</a>
+            </div>
         </div>
-        <div class="card">
-            <span class="tag">D3.js</span>
-            <h3>Network Visualizations</h3>
-            <p>Interactive data structures built with custom force-directed graphs.</p>
+    </section>
+
+    <section id="web-dev">
+        <h2 class="section-title">Web Development</h2>
+        <div class="project-grid">
+            <div class="card dev-card">
+                <span class="tag">React + Next.js</span>
+                <h3>Keep Lite</h3>
+                <p>A high-performance note-taking app with real-time search and persistent storage.</p>
+                <a href="https://github.com/your-username" class="view-link">Github Code</a>
+            </div>
+            <div class="card dev-card">
+                <span class="tag">D3.js</span>
+                <h3>Data Visualizations</h3>
+                <p>Interactive network graphs visualizing complex datasets with custom force physics.</p>
+                <a href="#" class="view-link">Live Demo</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</main>
