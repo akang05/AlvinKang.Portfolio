@@ -39,6 +39,11 @@ nav {
     margin-left: 30px;
     font-weight: 600;
     font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
 }
 
 /* Layout Hierarchy */
@@ -94,14 +99,15 @@ main { padding: 0 10%; }
     background: #eee;
 }
 
-/* Project Profiles Grid */
-.project-grid {
+/* Grid for Education/Research Columns */
+.details-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 100px;
 }
 
+/* Universal Card Style */
 .card {
     background: #fff;
     padding: 40px;
@@ -112,13 +118,50 @@ main { padding: 0 10%; }
     flex-direction: column;
 }
 
+/* Creative Tilt for Projects & Research */
 .card:hover {
     border-color: var(--accent);
     transform: translateY(-10px) rotate(1deg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Links & Tags */
+/* Specific Education "Yonsei Look" overrides */
+.edu-card {
+    border-radius: 12px; /* Tighter corners for a formal look */
+    text-align: left;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px); /* Less tilt, more professional */
+    rotate: 0deg; 
+}
+
+.edu-date {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 4px 0 12px 0;
+}
+
+.edu-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.edu-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+/* Project Specific Styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
 .tag { 
     font-size: 11px; 
     font-weight: 700; 
@@ -127,8 +170,6 @@ main { padding: 0 10%; }
     margin-bottom: 15px; 
     display: block; 
 }
-
-.card h3 { margin-bottom: 15px; font-size: 1.4rem; }
 
 .view-link { 
     font-weight: 600; 
@@ -141,62 +182,10 @@ main { padding: 0 10%; }
 
 .view-link:hover { color: var(--accent); }
 
-/* Contact Section */
-#contact { 
-    padding: 120px 10%; 
-    text-align: center; 
-    background: #fafafa; 
-    border-top: 1px solid #eee; 
-    margin-top: 100px;
-}
-
-.contact-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 18px 45px;
-    background: var(--text);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.contact-button:hover {
-    background: var(--accent);
-    transform: scale(1.05);
-}
-
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
     .about-hero { flex-direction: column-reverse; text-align: center; padding: 60px 0; }
     .about-text h1 { font-size: 2.5rem; }
-    .about-image { justify-content: center; }
-}
-
-/* Keep all your previous CSS and add/update these parts: */
-
-.details-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 100px;
-}
-
-/* Ensure cards in the Education/Research section look consistent */
-.detail-column .card {
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.detail-column h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-/* Responsive adjustment for the Education/Research columns */
-@media (max-width: 768px) {
-    .details-grid {
-        grid-template-columns: 1fr;
-    }
+    .about-image { justify-content: center; margin-bottom: 30px; }
+    .details-grid { grid-template-columns: 1fr; }
 }
