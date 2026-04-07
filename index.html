@@ -1,178 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvin Kang | Portfolio</title>
-    <style>
-        :root {
-            --bg: #ffffff;
-            --text: #1a1a1a;
-            --accent: #0070f3; /* Purdue Gold or a sleek Blue work well */
-            --secondary: #f5f5f7;
-            --border: #eaeaea;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text); line-height: 1.6; background: var(--bg); }
-        
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 10%;
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            border-bottom: 1px solid var(--border);
-        }
-        .logo { font-size: 1.2rem; letter-spacing: 2px; }
-        .nav-links a { text-decoration: none; color: var(--text); margin-left: 2rem; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--accent); }
-
-        /* Hero Section */
-        .about-hero {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            align-items: center;
-            gap: 4rem;
-            padding: 8rem 10%;
-            min-height: 80vh;
-        }
-        h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
-        .about-text p { font-size: 1.1rem; color: #666; max-width: 600px; }
-        .profile-pic { width: 100%; border-radius: 24px; filter: grayscale(20%); transition: 0.5s; }
-        .profile-pic:hover { filter: grayscale(0%); transform: scale(1.02); }
-
-        /* Project Section */
-        main { padding: 0 10% 8rem; }
-        .section-title { font-size: 2rem; margin-bottom: 3rem; padding-top: 4rem; border-top: 1px solid var(--border); }
-        
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 5rem;
-        }
-
-        /* Project Cards */
-        .card {
-            background: var(--secondary);
-            padding: 2.5rem;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid transparent;
-        }
-        .card:hover { 
-            transform: translateY(-8px); 
-            background: #fff;
-            border-color: var(--border);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-        .tag { 
-            font-size: 0.7rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            font-weight: 700; 
-            color: var(--accent);
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .card p { font-size: 0.95rem; color: #555; margin-bottom: 2rem; flex-grow: 1; }
-        
-        .view-link { 
-            text-decoration: none; 
-            color: var(--text); 
-            font-weight: 600; 
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-        }
-        .view-link:hover { text-decoration: underline; }
-
-        @media (max-width: 768px) {
-            .about-hero { grid-template-columns: 1fr; text-align: center; padding: 4rem 5%; }
-            .nav-links { display: none; }
-            h1 { font-size: 2.5rem; }
-        }
-    </style>
-</head>
-<body>
-
 <nav>
     <div class="logo"><strong>ALVIN.</strong></div>
     <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#ux-design">UX Design</a>
-        <a href="#web-dev">Web Development</a>
-        <a href="mailto:your-email@purdue.edu">Contact</a>
+        <a href="#about">About & Work</a>
+        <a href="#contact">Contact</a>
     </div>
 </nav>
 
 <header id="about" class="about-hero">
-    <div class="about-text">
-        <h1>Building for the User.<br>Coding for the Future.</h1>
-        <p>Hello! My name is Alvin Kang and I am a student at Purdue University double majoring in Web Programming & Design and Data Visualization, pursuing minors in Computer Information Technology and Global Technology. Working at the intersection of <strong>UX Research</strong> and <strong>Full-Stack Development</strong>, I transform complex data into intuitive human experiences.</p>
-    </div>
-    <div class="about-image">
-        <img src="assets/me.jpg" alt="Alvin Kang" class="profile-pic">
+    <div class="about-content-wrapper">
+        <div class="about-profile-split">
+            <div class="about-text">
+                <h1>Building for the User.<br>Coding for the Future.</h1>
+                <p>Hello! My name is Alvin Kang and I am a student at Purdue University double majoring in Web Programming & Design and Data Visualization. Working at the intersection of <strong>UX Research</strong> and <strong>Full-Stack Development</strong>, I transform complex data into intuitive human experiences.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/me.jpg" alt="Alvin Kang" class="profile-pic">
+            </div>
+        </div>
+
+        <div class="work-showcase">
+            <h2 class="section-title">Selected UX Research</h2>
+            <div class="project-grid">
+                <article class="card">
+                    <span class="tag">Case Study</span>
+                    <h3>Starbucks App Redesign</h3>
+                    <p>Heuristic evaluation and user flow optimization to reduce friction in mobile ordering.</p>
+                    <a href="#" class="view-link">View Case Study</a>
+                </article>
+                <article class="card">
+                    <span class="tag">UX Research</span>
+                    <h3>Productivity Ecosystem</h3>
+                    <p>Task-management designed through 1:1 user interviews and empathy mapping.</p>
+                    <a href="#" class="view-link">View Process</a>
+                </article>
+            </div>
+
+            <h2 class="section-title">Engineering & Data</h2>
+            <div class="project-grid">
+                <article class="card">
+                    <span class="tag">React + Next.js</span>
+                    <h3>Keep Lite</h3>
+                    <p>A performance-first note-taking application with real-time search and Prisma storage.</p>
+                    <a href="#" class="view-link">Github Code</a>
+                </article>
+                <article class="card">
+                    <span class="tag">D3.js</span>
+                    <h3>Network Visualization</h3>
+                    <p>Interactive graphs visualizing complex datasets with custom force physics.</p>
+                    <a href="#" class="view-link">Live Demo</a>
+                </article>
+            </div>
+        </div>
     </div>
 </header>
 
-<main>
-    <section id="ux-design">
-        <h2 class="section-title">User Experience Research</h2>
-        <div class="project-grid">
-            <article class="card">
-                <div>
-                    <span class="tag">Case Study</span>
-                    <h3>Starbucks App Redesign</h3>
-                    <p>Heuristic evaluation and user flow optimization to reduce friction in the mobile ordering process, focusing on accessibility and speed.</p>
-                </div>
-                <a href="#" class="view-link">Read Case Study &rarr;</a>
-            </article>
-
-            <article class="card">
-                <div>
-                    <span class="tag">UX Research</span>
-                    <h3>Productivity Ecosystem</h3>
-                    <p>A task-management ecosystem for college students designed through 1:1 user interviews, empathy mapping, and high-fidelity storyboarding.</p>
-                </div>
-                <a href="#" class="view-link">View Process &rarr;</a>
-            </article>
-        </div>
-    </section>
-
-    <section id="web-dev">
-        <h2 class="section-title">Engineering & Data</h2>
-        <div class="project-grid">
-            <article class="card">
-                <div>
-                    <span class="tag">React + Next.js</span>
-                    <h3>Keep Lite</h3>
-                    <p>A performance-first note-taking application featuring real-time search, persistent storage via Prisma, and a clean, minimalist UI.</p>
-                </div>
-                <a href="#" class="view-link">View on GitHub &rarr;</a>
-            </article>
-
-            <article class="card">
-                <div>
-                    <span class="tag">D3.js + Data Vis</span>
-                    <h3>Network Visualization</h3>
-                    <p>Interactive network graphs visualizing complex datasets using custom force physics and D3.js to reveal hidden data relationships.</p>
-                </div>
-                <a href="#" class="view-link">Launch Live Demo &rarr;</a>
-            </article>
-        </div>
-    </section>
-</main>
-
-</body>
-</html>
+<footer id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>I'm always open to discussing UX research or full-stack opportunities.</p>
+    <a href="mailto:your-email@purdue.edu" class="contact-button">your-email@purdue.edu</a>
+</footer>
