@@ -1,50 +1,144 @@
-/* Layout Tweaks */
+/* Color System & Variables */
+:root {
+    --accent: #d4af37; /* Purdue Gold - switch to #0070f3 for a Tech Blue */
+    --text: #1a1a1a;
+    --text-muted: #666666;
+    --bg-secondary: #f8f9fa;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hero Section */
 .about-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    padding: 100px 0;
+    gap: 60px; /* Increased gap for better breathing room */
+    padding: 120px 0;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.about-text { flex: 2; }
-.about-image { flex: 1; text-align: right; }
+.about-text { 
+    flex: 2; 
+}
 
+.about-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+.about-image { 
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Profile Picture with Creative "Floating" Effect */
 .profile-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 20px; /* Modern rounded corners */
+    width: 280px;
+    height: 350px; /* Non-square for a more editorial look */
+    border-radius: 30px;
     object-fit: cover;
-    filter: grayscale(20%); /* Adds a subtle professional "look" */
-    border: 4px solid #f0f0f0;
+    filter: grayscale(10%);
+    border: 1px solid #eee;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
 }
 
-/* Section Headers */
+.profile-pic:hover {
+    filter: grayscale(0%);
+    transform: translateY(-10px) rotate(2deg); /* Subtle playful interaction */
+}
+
+/* Section Headers - Minimalist & Sophisticated */
 .section-title {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    margin-top: 80px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-title::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background: #eee;
+}
+
+/* Project Card Layout (Add these to your grid) */
+.card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid #f0f0f0;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 700;
     color: var(--accent);
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block;
 }
 
 /* Links inside cards */
 .view-link {
-    display: inline-block;
-    margin-top: 15px;
-    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 600;
     text-decoration: none;
     color: var(--text);
     font-size: 0.9rem;
+    transition: var(--transition);
 }
 
-.view-link:hover { color: var(--accent); }
+.view-link::after {
+    content: " →";
+    transition: transform 0.2s;
+}
+
+.view-link:hover {
+    color: var(--accent);
+}
+
+.view-link:hover::after {
+    transform: translateX(5px);
+}
 
 /* Responsive for Mobile */
 @media (max-width: 768px) {
-    .about-hero { flex-direction: column-reverse; text-align: center; }
-    .about-image { text-align: center; }
-    .profile-pic { width: 180px; height: 180px; }
+    .about-hero { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+        padding: 60px 20px;
+    }
+    
+    .about-text h1 { font-size: 2.2rem; }
+    
+    .about-image { 
+        justify-content: center; 
+        margin-bottom: 20px;
+    }
+    
+    .profile-pic { 
+        width: 220px; 
+        height: 220px; 
+        border-radius: 50%; /* Circle looks better on mobile center-align */
+    }
 }
