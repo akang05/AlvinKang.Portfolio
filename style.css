@@ -1,0 +1,51 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --accent: #0070f3; /* Clean Blue */
+  --secondary: #666;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+nav { display: flex; justify-content: space-between; margin-bottom: 80px; }
+nav a { text-decoration: none; color: var(--secondary); font-weight: 500; }
+nav a:hover { color: var(--accent); }
+
+.hero h1 { font-size: 3.5rem; letter-spacing: -2px; margin-bottom: 10px; }
+.hero p { font-size: 1.25rem; color: var(--secondary); max-width: 600px; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.card {
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.tag {
+  font-size: 0.8rem;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
