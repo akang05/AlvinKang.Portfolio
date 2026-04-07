@@ -1,67 +1,92 @@
-/* Layout Overhaul */
-.about-hero {
-    padding: 100px 10% 40px;
-    display: flex;
-    flex-direction: column; /* Stack bio and projects vertically */
+:root {
+    --accent: #d4af37; /* Purdue Gold */
+    --text: #1a1a1a;
+    --text-muted: #666666;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.about-profile-split {
+/* Layout Hierarchy */
+main { padding: 0 10%; }
+.about-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    margin-bottom: 100px; /* Space between bio and project grid */
+    padding: 120px 0 80px;
 }
 
-/* Contact Section / Footer */
-#contact {
-    padding: 100px 10%;
-    background: var(--bg-secondary);
-    text-align: center;
+/* The Creative Profile/Project Card Styles */
+.card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid #eee;
+    transition: var(--transition);
 }
 
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px) rotate(1deg); /* Creative 'tilt' effect */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Specific styling for your portrait */
+.profile-pic {
+    width: 280px;
+    height: 350px; 
+    border-radius: 30px;
+    object-fit: cover;
+    filter: grayscale(15%);
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.profile-pic:hover {
+    filter: grayscale(0%);
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+/* Section Styling */
+.section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-title::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background: #eee;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Links & Tags */
+.tag { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 15px; display: block; }
+.view-link { font-weight: 600; text-decoration: none; color: var(--text); font-size: 0.9rem; margin-top: 20px; display: inline-block; }
+.view-link:hover { color: var(--accent); }
+
+/* Contact Section */
+#contact { padding: 100px 10%; text-align: center; background: #fcfcfc; border-top: 1px solid #eee; }
 .contact-button {
     display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
+    margin-top: 25px;
+    padding: 16px 40px;
     background: var(--text);
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: var(--transition);
-}
-
-.contact-button:hover {
-    background: var(--accent);
-    transform: translateY(-3px);
-}
-
-/* Refined Typography for Bio */
-.about-text h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
-
-.about-text p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--text-muted);
-}
-
-/* Responsive Fixes */
-@media (max-width: 900px) {
-    .about-profile-split {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    
-    .about-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr; /* Single column for projects on mobile */
-    }
 }
