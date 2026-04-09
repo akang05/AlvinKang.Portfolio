@@ -49,6 +49,7 @@ nav {
 /* Layout Hierarchy */
 main { padding: 0 10%; }
 
+/* Hero Section */
 .about-hero {
     display: flex;
     align-items: center;
@@ -60,7 +61,7 @@ main { padding: 0 10%; }
 .about-text { flex: 1.5; }
 .about-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
 
-/* Hero Links Bar */
+/* Links Bar (Pill Shape) */
 .hero-links-bar {
     display: inline-flex;
     align-items: center;
@@ -101,7 +102,7 @@ main { padding: 0 10%; }
     color: currentColor;
 }
 
-/* The Portrait Profile */
+/* Portrait Styling */
 .about-image { flex: 1; display: flex; justify-content: flex-end; }
 
 .profile-pic {
@@ -120,7 +121,7 @@ main { padding: 0 10%; }
     box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
-/* Section Styling */
+/* Section Headers */
 .section-title {
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -140,13 +141,13 @@ main { padding: 0 10%; }
     background: #eee;
 }
 
-/* Vertical Row Layout */
+/* Layout Rows */
 .details-row {
     margin-bottom: 60px;
     width: 100%;
 }
 
-/* Universal Card Style */
+/* Universal Card Design */
 .card {
     background: #fff;
     padding: 40px;
@@ -163,7 +164,7 @@ main { padding: 0 10%; }
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Specific Education "Yonsei Look" overrides */
+/* Education "Yonsei Look" Fixes */
 .edu-card {
     width: 100%;
     border-radius: 12px; 
@@ -173,7 +174,7 @@ main { padding: 0 10%; }
 
 .edu-card:hover {
     transform: translateY(-5px); 
-    rotate: 0deg; 
+    rotate: 0deg; /* Professional items stay flat */
     border-color: var(--accent);
 }
 
@@ -195,7 +196,7 @@ main { padding: 0 10%; }
     margin-bottom: 2px;
 }
 
-/* Project/Research Grid */
+/* Research Interests Grid */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -212,11 +213,20 @@ main { padding: 0 10%; }
     display: block; 
 }
 
-/* Responsive Adjustments */
+/* Responsive Overrides */
 @media (max-width: 900px) {
-    .about-hero { flex-direction: column-reverse; text-align: center; padding: 60px 0; }
+    .about-hero { 
+        flex-direction: column-reverse; 
+        text-align: center; 
+        padding: 60px 0; 
+    }
     .about-text h1 { font-size: 2.5rem; }
     .about-image { justify-content: center; margin-bottom: 30px; }
     .edu-card { padding: 25px; }
-    .hero-links-bar { gap: 15px; padding: 10px 20px; }
+    .hero-links-bar { 
+        gap: 15px; 
+        padding: 10px 20px; 
+        display: flex;
+        justify-content: center;
+    }
 }
