@@ -1,12 +1,34 @@
-/* --- Global Resets & Typography --- */
+/* --- GLOBAL ICON FIX (Stops icons from growing huge) --- */
+.action-icons svg, 
+.github-icon svg, 
+.social-links svg,
+.hero-icon svg {
+    width: 20px !important;  /* Strict width constraint */
+    height: 20px !important; /* Strict height constraint */
+    display: inline-block;
+    flex-shrink: 0;          /* Prevents squishing in flex containers */
+    stroke-width: 2;         /* Maintains consistent line weight */
+}
+
+.action-icons a, 
+.github-icon,
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    width: auto !important;
+}
+
+/* --- Layout & Typography --- */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #fafafa;
-    color: #333;
     margin: 0;
+    color: #333;
 }
 
-/* --- Navigation --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -31,7 +53,7 @@ nav {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #aaa;
-    margin-bottom: 30px;
+    margin: 40px 0 20px 0;
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
 }
@@ -40,29 +62,27 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
-    margin-bottom: 60px;
 }
 
-/* --- Card Architecture --- */
+/* --- Vertical Card Architecture --- */
 .card {
     background: #fff;
     border: 1px solid #f0f0f0;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Stacks image over text */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-direction: column; /* Image on top, text below */
+    transition: transform 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
 }
 
 .project-viz {
     width: 100%;
     height: 220px;
-    object-fit: cover; /* Crops image to fit the container */
+    object-fit: cover; /* Ensures image fills top half correctly */
     display: block;
 }
 
@@ -70,7 +90,7 @@ nav {
     padding: 24px;
 }
 
-/* --- Title & Icon Alignment --- */
+/* --- Leveling Title and Icon --- */
 .title-row {
     display: flex;
     justify-content: space-between;
@@ -80,29 +100,10 @@ nav {
 
 .title-row h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 800;
 }
 
-/* THE ICON FIX */
-.action-icons svg {
-    width: 20px !important;
-    height: 20px !important;
-    display: block;
-    stroke-width: 2;
-    color: #333;
-}
-
-.action-icons a {
-    text-decoration: none;
-    opacity: 0.8;
-}
-
-.action-icons a:hover {
-    opacity: 1;
-}
-
-/* --- Content Styling --- */
 .project-date {
     font-size: 0.85rem;
     color: #999;
