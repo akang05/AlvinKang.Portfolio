@@ -39,7 +39,7 @@ nav {
 
 main { padding: 0 10%; }
 
-/* --- Hero Section --- */
+/* --- Hero Section & Pill-Bar Fixes --- */
 .about-hero {
     display: flex;
     align-items: center;
@@ -60,7 +60,6 @@ main { padding: 0 10%; }
     max-width: 600px;
 }
 
-/* Pill-Shaped Social Bar Fixes */
 .hero-links-bar {
     display: inline-flex;
     align-items: center;
@@ -89,10 +88,12 @@ main { padding: 0 10%; }
     transform: translateY(-2px);
 }
 
-/* SVG Icon Constraint */
+/* CRITICAL FIX: Constrains SVG icons so they don't fill the page */
 .hero-icon {
     width: 20px;
     height: 20px;
+    display: inline-block;
+    flex-shrink: 0;
 }
 
 .profile-pic {
