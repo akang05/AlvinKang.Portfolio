@@ -1,17 +1,19 @@
-/* --- GLOBAL ICON FIX (Stops icons from growing huge) --- */
+/* --- GLOBAL ICON FIX (Covers About & Projects Pages) --- */
 .action-icons svg, 
 .github-icon svg, 
 .social-links svg,
-.hero-icon svg {
-    width: 20px !important;  /* Strict width constraint */
-    height: 20px !important; /* Strict height constraint */
+.hero-icon { /* Added hero-icon here to fix the About page */
+    width: 20px !important;  
+    height: 20px !important; 
     display: inline-block;
-    flex-shrink: 0;          /* Prevents squishing in flex containers */
-    stroke-width: 2;         /* Maintains consistent line weight */
+    flex-shrink: 0;          
+    stroke-width: 2;         
 }
 
+/* Prevents link containers from stretching huge */
 .action-icons a, 
 .github-icon,
+.hero-link-item,
 .social-links a {
     display: inline-flex;
     align-items: center;
@@ -19,6 +21,7 @@
     text-decoration: none;
     color: inherit;
     width: auto !important;
+    gap: 8px; /* Adds space between icon and "Email/GitHub" text */
 }
 
 /* --- Layout & Typography --- */
@@ -43,9 +46,32 @@ nav {
     font-weight: 600;
 }
 
-/* --- Grid Structure --- */
-.work-showcase {
+/* --- Hero Section (About Page) --- */
+.about-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    gap: 50px;
+}
+
+.hero-links-bar {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --- Grid & Details (Used on both pages) --- */
+.work-showcase, .details-row {
     padding: 0 10%;
+    margin-bottom: 50px;
 }
 
 .section-title {
@@ -69,10 +95,15 @@ nav {
     background: #fff;
     border: 1px solid #f0f0f0;
     border-radius: 20px;
-    overflow: hidden;
+    padding: 24px; /* Standard padding for text-only cards */
     display: flex;
-    flex-direction: column; /* Image on top, text below */
+    flex-direction: column;
     transition: transform 0.2s ease;
+}
+
+/* For cards with images (Projects) */
+.card:has(.card-header) {
+    padding: 0; 
 }
 
 .card:hover {
@@ -82,7 +113,7 @@ nav {
 .project-viz {
     width: 100%;
     height: 220px;
-    object-fit: cover; /* Ensures image fills top half correctly */
+    object-fit: cover;
     display: block;
 }
 
@@ -90,21 +121,22 @@ nav {
     padding: 24px;
 }
 
-/* --- Leveling Title and Icon --- */
-.title-row {
+/* --- Alignment for Project Title + Link Icon --- */
+.title-row, .title-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6px;
 }
 
-.title-row h3 {
+.title-row h3, .title-icons h3 {
     margin: 0;
     font-size: 1.25rem;
     font-weight: 800;
 }
 
-.project-date {
+/* --- Sub-elements --- */
+.project-date, .edu-date {
     font-size: 0.85rem;
     color: #999;
     font-style: italic;
@@ -118,17 +150,23 @@ nav {
     margin-bottom: 20px;
 }
 
-.tech-stack {
+.tech-stack, .tag {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.tech-stack span {
+.tech-stack span, .tag {
     background: #f4f4f4;
     padding: 5px 12px;
     border-radius: 50px;
     font-size: 0.7rem;
     font-weight: 600;
     color: #777;
+}
+
+.edu-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
 }
