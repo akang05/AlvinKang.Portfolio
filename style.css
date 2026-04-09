@@ -1,24 +1,19 @@
-/* --- Global Styles --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- Global Styles & Compact Navigation --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Inter', sans-serif;
     color: #1a1a1a;
-    line-height: 1.6;
     background-color: #ffffff;
 }
 
 :root {
     --accent: #d4af37; /* Purdue Gold */
     --text-muted: #666666;
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --card-bg: #fff;
+    --transition: all 0.3s ease;
 }
 
-/* --- Navigation & Compact Header --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -39,11 +34,9 @@ nav {
     font-size: 0.9rem;
 }
 
-.nav-links a:hover { color: var(--accent); }
-
 main { padding: 0 10%; }
 
-.work-showcase { padding-top: 20px; } /* Compacted top space */
+.work-showcase { padding-top: 20px; } /* Fixed top space issue */
 
 .section-title {
     font-size: 0.8rem;
@@ -63,18 +56,18 @@ main { padding: 0 10%; }
     background: #eee;
 }
 
-/* --- Vertical Card Layout --- */
-.project-grid {
+/* --- Compact Vertical Card Grid --- */
+.compact-vertical-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Exactly that size */
+    gap: 25px;
+    margin-bottom: 50px;
 }
 
 .vertical-card {
-    background: #fff;
+    background: var(--card-bg);
     border: 1px solid #eee;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     transition: var(--transition);
     display: flex;
@@ -84,85 +77,73 @@ main { padding: 0 10%; }
 .vertical-card:hover {
     border-color: var(--accent);
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
 }
 
 .card-header {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background: #f8f8f8;
 }
 
-.project-viz {
+.card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.5s ease;
 }
 
-.vertical-card:hover .project-viz {
-    transform: scale(1.05);
-}
+.vertical-card:hover .card-img { transform: scale(1.05); }
 
 .card-body {
-    padding: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.title-icons {
+.title-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.title-icons h3 {
-    font-size: 1.15rem;
-    font-weight: 700;
-}
+.title-row h3 { font-size: 1.1rem; font-weight: 700; }
 
-.action-icons a, .github-icon {
-    color: #1a1a1a;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-}
+.icon-svg { width: 18px; height: 18px; color: #1a1a1a; transition: color 0.2s; }
+.card-icons a:hover .icon-svg { color: var(--accent); }
 
-.action-icons a:hover, .github-icon:hover { color: var(--accent); }
-
-.project-date {
-    font-size: 0.85rem;
+.card-date {
+    font-size: 0.8rem;
     color: var(--text-muted);
     font-style: italic;
     margin-bottom: 12px;
 }
 
-.project-description {
+.card-desc {
     font-size: 0.9rem;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-/* --- Tech Tags --- */
-.tech-stack {
+/* --- Tech Tags Row --- */
+.tag-row {
+    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: auto;
 }
 
-.tech-stack span {
+.tag-row span {
     font-size: 10px;
     font-weight: 600;
-    color: #555;
     background: #f4f4f4;
-    padding: 5px 12px;
+    color: #555;
+    padding: 4px 10px;
     border-radius: 100px;
 }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
-    .project-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+    .compact-vertical-grid { grid-template-columns: 1fr; }
 }
