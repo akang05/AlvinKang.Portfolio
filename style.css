@@ -1,88 +1,133 @@
-/* --- Global Icon Fix --- */
-/* Targets all SVG icons in project cards and social bars */
-.action-icons svg, 
-.github-icon svg, 
-.hero-icon {
-    width: 20px !important;  /* Constraints icons to small size */
-    height: 20px !important;
-    display: inline-block;
-    flex-shrink: 0;
-    stroke-width: 2;
+/* --- Global Resets & Typography --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
 }
 
-/* Prevents the link wrapper from stretching the full card width */
-.action-icons a, 
-.github-icon {
-    display: flex;
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.2s ease;
-}
-
-.action-icons a:hover, 
-.github-icon:hover {
-    opacity: 0.6;
-}
-
-/* --- Layout Alignment --- */
-.title-icons {
+/* --- Navigation --- */
+nav {
     display: flex;
     justify-content: space-between;
+    padding: 30px 10%;
     align-items: center;
-    margin-bottom: 8px;
 }
 
-.action-icons {
-    display: flex;
-    gap: 12px;
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
 }
 
-/* --- Card Formatting --- */
+/* --- Grid Structure --- */
+.work-showcase {
+    padding: 0 10%;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* --- Card Architecture --- */
 .card {
     background: #fff;
-    border: 1px solid #eee;
-    border-radius: 16px;
-    overflow: hidden; /* Ensures image corners match card radius */
-    transition: transform 0.3s ease;
+    border: 1px solid #f0f0f0;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stacks image over text */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .project-viz {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 220px;
+    object-fit: cover; /* Crops image to fit the container */
+    display: block;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 24px;
 }
 
+/* --- Title & Icon Alignment --- */
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.title-row h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+/* THE ICON FIX */
+.action-icons svg {
+    width: 20px !important;
+    height: 20px !important;
+    display: block;
+    stroke-width: 2;
+    color: #333;
+}
+
+.action-icons a {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.action-icons a:hover {
+    opacity: 1;
+}
+
+/* --- Content Styling --- */
 .project-date {
     font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 10px;
+    color: #999;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 15px;
 }
 
 .tech-stack span {
-    background: #f5f5f5;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 0.75rem;
+    background: #f4f4f4;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
     font-weight: 600;
-}
-
-/* --- Grid Structure --- */
-.project-grid.vertical-stacked {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    color: #777;
 }
