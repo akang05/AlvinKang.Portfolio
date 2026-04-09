@@ -176,3 +176,41 @@ nav {
     border-top: 1px solid #eee;
     margin: 15px 0;
 }
+
+/* --- Keep Lite / Vertical Card Enhancements --- */
+
+.vertical-styled .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.vertical-styled .project-date {
+    font-style: italic; /* Matches the Engineering section screenshot */
+    margin-bottom: 12px;
+}
+
+.vertical-styled .project-description {
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes footer to the bottom */
+}
+
+/* Footer layout: Tech tags left, GitHub icon right */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.vertical-styled .project-viz {
+    height: 180px; /* Specific height for visual banners */
+    background-color: #f9f9f9;
+}
+
+/* Ensure icons remain small and consistent */
+.action-icons svg {
+    width: 18px !important;
+    height: 18px !important;
+    stroke-width: 2;
+}
