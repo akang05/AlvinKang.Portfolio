@@ -49,78 +49,6 @@ nav {
 /* Layout Hierarchy */
 main { padding: 0 10%; }
 
-/* Hero Section */
-.about-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    padding: 100px 0 80px;
-}
-
-.about-text { flex: 1.5; }
-.about-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
-
-/* Links Bar (Pill Shape) */
-.hero-links-bar {
-    display: inline-flex;
-    align-items: center;
-    gap: 25px;
-    padding: 12px 30px;
-    background: #ffffff;
-    border: 1px solid #eee;
-    border-radius: 100px;
-    margin-top: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-}
-
-.hero-links-bar:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    border-color: var(--accent);
-}
-
-.hero-link-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.hero-link-item:hover {
-    color: var(--accent);
-}
-
-.hero-icon {
-    width: 20px;
-    height: 20px;
-    color: currentColor;
-}
-
-/* Portrait Styling */
-.about-image { flex: 1; display: flex; justify-content: flex-end; }
-
-.profile-pic {
-    width: 280px;
-    height: 350px; 
-    border-radius: 30px;
-    object-fit: cover;
-    filter: grayscale(15%);
-    border: 1px solid #eee;
-    transition: var(--transition);
-}
-
-.profile-pic:hover {
-    filter: grayscale(0%);
-    transform: translateY(-15px) rotate(-2deg);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-}
-
 /* Section Headers */
 .section-title {
     font-size: 0.8rem;
@@ -141,12 +69,6 @@ main { padding: 0 10%; }
     background: #eee;
 }
 
-/* Layout Rows */
-.details-row {
-    margin-bottom: 60px;
-    width: 100%;
-}
-
 /* Universal Card Design */
 .card {
     background: #fff;
@@ -164,45 +86,94 @@ main { padding: 0 10%; }
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Education "Yonsei Look" Fixes */
+/* --- Split Layout (Project Page) --- */
+.split-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.split-card {
+    flex-direction: row; /* Overrides column for project view */
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.split-left {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+}
+
+.split-right {
+    flex: 2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.split-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    object-fit: cover;
+}
+
+.view-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-top: 15px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.view-link:hover { color: var(--accent); }
+
+/* --- About Page Specifics --- */
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 100px 0 80px;
+}
+
+.hero-links-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 12px 30px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 100px;
+    margin-top: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.profile-pic {
+    width: 280px;
+    height: 350px; 
+    border-radius: 30px;
+    object-fit: cover;
+    filter: grayscale(15%);
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
 .edu-card {
     width: 100%;
     border-radius: 12px; 
-    text-align: left;
     padding: 30px 40px;
 }
 
-.edu-card:hover {
-    transform: translateY(-5px); 
-    rotate: 0deg; /* Professional items stay flat */
-    border-color: var(--accent);
-}
-
-.edu-date {
-    font-style: italic;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin: 4px 0 12px 0;
-}
-
-.edu-divider {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 15px 0;
-}
-
-.edu-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 2px;
-}
-
-/* Research Interests Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-    margin-bottom: 40px;
-}
+.edu-card:hover { transform: translateY(-5px); rotate: 0deg; }
 
 .tag { 
     font-size: 11px; 
@@ -210,23 +181,18 @@ main { padding: 0 10%; }
     color: var(--accent); 
     text-transform: uppercase; 
     margin-bottom: 15px; 
-    display: block; 
 }
 
-/* Responsive Overrides */
+/* --- Responsive Overrides --- */
 @media (max-width: 900px) {
-    .about-hero { 
-        flex-direction: column-reverse; 
-        text-align: center; 
-        padding: 60px 0; 
+    .about-hero { flex-direction: column-reverse; text-align: center; }
+    .split-layout-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .split-card {
+        flex-direction: column; 
+        text-align: center;
     }
-    .about-text h1 { font-size: 2.5rem; }
-    .about-image { justify-content: center; margin-bottom: 30px; }
-    .edu-card { padding: 25px; }
-    .hero-links-bar { 
-        gap: 15px; 
-        padding: 10px 20px; 
-        display: flex;
-        justify-content: center;
-    }
+    .split-right { text-align: center; }
 }
