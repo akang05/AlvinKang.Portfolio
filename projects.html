@@ -6,6 +6,19 @@
     <title>Projects | Alvin Kang</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensures the case study links don't mess up your styling */
+        .card-link-wrapper {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            transition: transform 0.2s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -18,52 +31,63 @@
 </nav>
 
 <main>
-    <!-- UX RESEARCH CASE STUDY SECTION -->
     <section class="work-showcase">
-        <h2 class="section-title">UX Case Study: CGT 17208</h2>
-        
-        <div class="case-study-container" style="background: #f9f9f9; padding: 40px; border-radius: 12px; margin-bottom: 50px;">
+        <h2 class="section-title">UX Research</h2>
+        <div class="project-grid">
             
-            <!-- 1. OVERVIEW & CHALLENGE -->
-            <div class="cs-header" style="margin-bottom: 30px;">
-                <h3>[Project Title: e.g., Starbucks App Redesign]</h3>
-                <p class="project-date">Spring 2026 | UXD Studio 1</p>
-                <p style="margin-top: 15px;"><strong>Project Overview:</strong> [FILL IN: Briefly introduce the project and its context. What was the assignment?]</p>
-                <p><strong>The Challenge:</strong> [FILL IN: Explain the problem you addressed. Why did this design challenge matter?]</p>
-            </div>
-
-            <!-- 2. INDIVIDUAL CONTRIBUTION -->
-            <div class="cs-role" style="border-left: 4px solid #000; padding-left: 20px; margin-bottom: 30px;">
-                <h4>My Role & Contribution</h4>
-                <p>[FILL IN: Be specific about your individual tasks. Did you lead the interviews? Build the Figma prototype? Conduct the heuristic evaluation?]</p>
-            </div>
-
-            <!-- 3. PROCESS & EVIDENCE -->
-            <div class="cs-process" style="margin-bottom: 30px;">
-                <h4>Design Process & Insights</h4>
-                <p>[FILL IN: Describe your steps—research, synthesis, wireframing. Focus on the 'Why' behind your choices.]</p>
-                
-                <!-- Placeholder for Image Artifact -->
-                <div style="background: #ddd; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin: 20px 0;">
-                    <p style="color: #666;">[Insert curated visual here: e.g., Journey Map or Prototype screenshot]</p>
+            <!-- Productivity App -->
+            <article class="card">
+                <a href="productivity-case.html" class="card-link-wrapper">
+                    <div class="card-header">
+                        <img src="assets/productivity-app.jpg" alt="Productivity App" class="project-viz">
+                    </div>
+                </a>
+                <div class="card-body">
+                    <div class="title-row">
+                        <a href="productivity-case.html" class="card-link-wrapper">
+                            <h3>Redesign Productivity App</h3>
+                        </a>
+                        <div class="action-icons">
+                            <a href="assets/Group2_Project1_Documentation.pdf" target="_blank" title="View PDF Documentation">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-date">January 2026 – February 2026</p>
+                    <p class="project-description">Task-management designed through 1:1 user interviews and empathy mapping to reduce student cognitive load.</p>
+                    <div class="tech-stack">
+                        <span>Figma</span> <span>User Research</span> <span>Journey Mapping</span> <span>Prototyping</span> <span>Usability Testing</span> <span>Wireframing</span>
+                    </div>
                 </div>
+            </article>
 
-                <p><strong>The Turning Point:</strong> [FILL IN: Identify a key insight or realization that changed your design direction.]</p>
-            </div>
-
-            <!-- 4. FINAL OUTCOME & REFLECTION -->
-            <div class="cs-outcome" style="margin-bottom: 10px;">
-                <h4>Final Outcome</h4>
-                <p>[FILL IN: Present the final concept or prototype clearly. What was the result?]</p>
-            </div>
-
-            <div class="cs-reflection" style="background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-                <h4>Reflection</h4>
-                <p>[FILL IN: What did you learn about yourself as a designer? What does this project prove about your skills to an outside audience?]</p>
-            </div>
+            <!-- Starbucks App -->
+            <article class="card">
+                <a href="starbucks-case.html" class="card-link-wrapper">
+                    <div class="card-header">
+                        <img src="assets/starbucks-study.jpg" alt="Starbucks App" class="project-viz">
+                    </div>
+                </a>
+                <div class="card-body">
+                    <div class="title-row">
+                        <a href="starbucks-case.html" class="card-link-wrapper">
+                            <h3>Starbucks App Redesign</h3>
+                        </a>
+                        <div class="action-icons">
+                            <a href="assets/Project 2 Learning Studio.pdf" target="_blank" title="View PDF Documentation">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-date">February 2026 – March 2026</p>
+                    <p class="project-description">Heuristic evaluation and user flow optimization to reduce friction in mobile ordering.</p>
+                    <div class="tech-stack">
+                        <span>Problem Framing</span> <span>UI/UX</span> <span>Prototyping</span> <span>Figma</span> <span>User Research</span> <span>Affinity Diagramming</span> <span>Journey Mapping</span> <span>Wireframing</span> <span>Usability Testing</span>
+                    </div>
+                </div>
+            </article>
         </div>
 
-        <!-- WEBSITES/APPS SECTION (KEPT ORIGINAL) -->
         <h2 class="section-title">Websites/Apps</h2>
         <div class="project-grid">
             <article class="card vertical-styled">
@@ -88,7 +112,6 @@
             </article>
         </div>
 
-        <!-- DATA VIZ SECTION (KEPT ORIGINAL) -->
         <h2 class="section-title">Data Visualization Dashboards</h2>
         <div class="project-grid">
             <article class="card">
@@ -112,8 +135,6 @@
                 </div>
             </article>
         </div>
-        
-        <h2 class="section-title">Research</h2>
     </section>
 </main>
 
