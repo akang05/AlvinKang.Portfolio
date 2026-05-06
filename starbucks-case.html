@@ -6,6 +6,114 @@
     <title>Case Study | Starbucks App Redesign</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Consistent Portfolio Layout Styles */
+        body {
+            line-height: 1.7;
+            color: #2d3436;
+            background-color: #ffffff;
+        }
+
+        .case-study-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .case-header {
+            margin-bottom: 80px;
+            text-align: left;
+        }
+
+        .case-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .project-meta {
+            font-size: 1rem;
+            color: #636e72;
+            font-weight: 400;
+        }
+
+        .case-section {
+            margin-bottom: 80px;
+        }
+
+        .case-section h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #b2bec3;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #dfe6e9;
+            padding-bottom: 10px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .process-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background-color: #f9f9fb;
+            padding: 50px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .highlight .insight-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+            font-style: italic;
+            color: #00704a; /* Starbucks Green for subtle branding */
+            margin-bottom: 20px;
+        }
+
+        /* Outcome Styling to handle long text */
+        .outcome-content h3 {
+            font-size: 1.3rem;
+            margin: 40px 0 15px 0;
+            color: #2d3436;
+        }
+
+        .outcome-content p {
+            margin-bottom: 20px;
+        }
+
+        .case-btn {
+            display: inline-block;
+            background: #2d3436;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .case-btn:hover {
+            transform: translateY(-3px);
+            background: #000;
+        }
+
+        @media (max-width: 768px) {
+            .case-header h1 { font-size: 2.2rem; }
+            .process-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,12 +131,13 @@
     <section class="case-section">
         <h2>Project Overview</h2>
         <p>The Campus Food Pickup project focuses on analyzing and redesigning the hybrid experience of ordering and retrieving food at a specific campus location. This study investigates the intersection of physical spaces, service interactions, and digital touchpoints—such as menus, ordering apps, and status instructions—to identify and reduce friction during critical "handoff" moments. The objective is to transform raw field evidence into a structured, defensible design that aligns user mental models with the system's operational logic, ultimately creating a more intuitive and less confusing experience.
-The project follows a comprehensive UX design cycle, starting with primary field research that includes time-stamped observations and user interviews to uncover specific pain points and behavioral themes. These findings are synthesized through affinity diagramming, journey mapping, and mental model representations to frame the problem and explore various concept directions. The process concludes with the development of an information architecture and a mid-fidelity clickable prototype, which is iteratively refined based on usability testing results and broader evaluations of feasibility and potential failure points.</p>
+        The project follows a comprehensive UX design cycle, starting with primary field research that includes time-stamped observations and user interviews to uncover specific pain points and behavioral themes. These findings are synthesized through affinity diagramming, journey mapping, and mental model representations to frame the problem and explore various concept directions. The process concludes with the development of an information architecture and a mid-fidelity clickable prototype, which is iteratively refined based on usability testing results and broader evaluations of feasibility and potential failure points.</p>
+    </section>
 
     <section class="case-section">
         <h2>Problem / Design Challenge</h2>
         <p>During busy periods the pickup process can become confusing. Many drinks are placed on the counter at the same time, and customers almost always have to search through several cups to find their order. Some people wait near the pickup area without knowing if their drink is ready, while others stand in the wrong place or ask employees for help. And when the counter becomes crowded, it becomes even harder for customers to locate their drinks and for employees to manage the handoff process.
-This project examines the Starbucks mobile pickup experience. Our team conducted observations and initial research to see how customers use the app and pick up their orders in the store. The goal is to identify where the process slows down or creates confusion, then use those findings to guide design changes that improve clarity in the app and at the pickup counter. </p>
+        This project examines the Starbucks mobile pickup experience. Our team conducted observations and initial research to see how customers use the app and pick up their orders in the store. The goal is to identify where the process slows down or creates confusion, then use those findings to guide design changes that improve clarity in the app and at the pickup counter. </p>
     </section>
 
     <section class="case-section">
@@ -52,32 +161,31 @@ This project examines the Starbucks mobile pickup experience. Our team conducted
 
     <section class="case-section highlight">
         <h2>Key Insight & Turning Point</h2>
+        <p class="insight-text">"Users don't think in categories; they think in sequences."</p>
         <p>The turning point was discovering that users don't think in "categories" (Milk, Syrup, Toppings), they think in <strong>sequences</strong>. I pivoted the design from a tabbed layout to a linear, scrollable "build-your-drink" flow that mirrors the barista's workflow.</p>
     </section>
 
     <section class="case-section">
         <h2>Final Outcome</h2>
-        <p>The final design is a dual-interface solution that replaces the disorganized "name-calling" system with a streamlined, transparent process focused on In-App Clarity and In-Store Navigation. By shifting from names to a unique Order ID and QR System, the design eliminates identification errors and reduces the cognitive load on both baristas and customers.</p>
-        <p>1. The Enhanced Mobile Experience
-The redesigned Starbucks app provides users with high-fidelity visibility into the preparation cycle, transforming the "wait" into a predictable experience:
+        <div class="outcome-content">
+            <p>The final design is a dual-interface solution that replaces the disorganized "name-calling" system with a streamlined, transparent process focused on In-App Clarity and In-Store Navigation. By shifting from names to a unique Order ID and QR System, the design eliminates identification errors and reduces the cognitive load on both baristas and customers.</p>
+            
+            <h3>1. The Enhanced Mobile Experience</h3>
+            <p>The redesigned Starbucks app provides users with high-fidelity visibility into the preparation cycle, transforming the "wait" into a predictable experience:</p>
+            <p><strong>Visual Progress Indicator:</strong> A thematic "filling coffee cup" progress bar that moves through three distinct stages: In Queue, Preparing, and Ready for Pickup.</p>
+            <p><strong>Unique Order Identification:</strong> Every order is assigned a unique number and a scannable QR code, moving away from the confusion of similar-sounding names.</p>
+            <p><strong>Dynamic Spatial Guidance:</strong> Upon completion, the app provides specific instructions on where the drink is located (e.g., "Pickup Cabinet B"), connecting the digital notification to the physical store layout.</p>
 
-Visual Progress Indicator: A thematic "filling coffee cup" progress bar that moves through three distinct stages: In Queue, Preparing, and Ready for Pickup.
+            <h3>2. The Smart Physical Handoff</h3>
+            <p>The in-store intervention reorganizes the pickup counter into a high-visibility, self-service station:</p>
+            <p><strong>Digital Status Board:</strong> A wall-mounted screen displays order numbers and real-time preparation status, allowing customers to track their progress without crowding the counter or interrupting baristas.</p>
+            <p><strong>Smart Pickup Cabinets:</strong> The counter is replaced with labeled, organized cabinets. When a customer arrives, they scan their QR code at a central kiosk, which triggers a green LED light at the specific section holding their drink.</p>
+            <p><strong>Frictionless Verification:</strong> This "scan-to-light" system ensures the customer finds their exact order instantly, preventing "Post-hoc Regret" or accidentally taking the wrong beverage.</p>
 
-Unique Order Identification: Every order is assigned a unique number and a scannable QR code, moving away from the confusion of similar-sounding names.
-
-Dynamic Spatial Guidance: Upon completion, the app provides specific instructions on where the drink is located (e.g., "Pickup Cabinet B"), connecting the digital notification to the physical store layout.
-
-2. The Smart Physical Handoff
-The in-store intervention reorganizes the pickup counter into a high-visibility, self-service station:
-
-Digital Status Board: A wall-mounted screen displays order numbers and real-time preparation status, allowing customers to track their progress without crowding the counter or interrupting baristas.
-
-Smart Pickup Cabinets: The counter is replaced with labeled, organized cabinets. When a customer arrives, they scan their QR code at a central kiosk, which triggers a green LED light at the specific section holding their drink.
-
-Frictionless Verification: This "scan-to-light" system ensures the customer finds their exact order instantly, preventing "Post-hoc Regret" or accidentally taking the wrong beverage.
-
-Design Rationale
-The final proposal successfully resolves the "Social Mimicry Trap" by providing clear System Cues (lights and numbers) that override the need to follow the crowd. By providing immediate feedback through both the app and the smart cabinets, the system closes the "open-loop" of uncertainty, ensuring that mobile ordering finally delivers on its promise of a fast, convenient, and "precision" experience.</p>
+            <h3>Design Rationale</h3>
+            <p>The final proposal successfully resolves the "Social Mimicry Trap" by providing clear System Cues (lights and numbers) that override the need to follow the crowd. By providing immediate feedback through both the app and the smart cabinets, the system closes the "open-loop" of uncertainty, ensuring that mobile ordering finally delivers on its promise of a fast, convenient, and "precision" experience.</p>
+        </div>
+        
         <a href="assets/Project 2 Learning Studio.pdf" target="_blank" class="case-btn">View Full Research PDF</a>
     </section>
 

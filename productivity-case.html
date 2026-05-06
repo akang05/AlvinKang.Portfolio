@@ -6,6 +6,116 @@
     <title>Case Study | Productivity App Redesign</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modern Portfolio Layout Styles */
+        body {
+            line-height: 1.7;
+            color: #2d3436;
+            background-color: #ffffff;
+        }
+
+        .case-study-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        .case-header {
+            margin-bottom: 80px;
+            text-align: left;
+        }
+
+        .case-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .project-meta {
+            font-size: 1rem;
+            color: #636e72;
+            font-weight: 400;
+        }
+
+        .case-section {
+            margin-bottom: 80px;
+        }
+
+        .case-section h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #b2bec3;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #dfe6e9;
+            padding-bottom: 10px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .process-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background-color: #f9f9fb;
+            padding: 50px;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .highlight blockquote {
+            font-size: 1.8rem;
+            font-weight: 600;
+            font-style: italic;
+            color: #0984e3;
+            margin-bottom: 20px;
+            border: none;
+            padding: 0;
+        }
+
+        /* Outcome Styling to handle long text */
+        .outcome-content h3 {
+            font-size: 1.3rem;
+            margin: 40px 0 15px 0;
+            color: #2d3436;
+        }
+
+        .outcome-content p {
+            margin-bottom: 20px;
+        }
+
+        .case-btn {
+            display: inline-block;
+            background: #2d3436;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .case-btn:hover {
+            transform: translateY(-3px);
+            background: #000;
+        }
+
+        @media (max-width: 768px) {
+            .case-header h1 { font-size: 2.2rem; }
+            .process-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
@@ -51,7 +161,7 @@
 
     <section class="case-section highlight">
         <h2>Key Insight & Turning Point</h2>
-        <blockquote>
+        <blockquote class="quote">
             "The realization was that productivity isn't about doing more; it's about knowing what to ignore."
         </blockquote>
         <p>A major turning point occurred when we realized our initial design had too many buttons. We pivoted to a "One-Task" view, which became the core differentiator of our redesign.</p>
@@ -59,22 +169,26 @@
 
     <section class="case-section">
         <h2>Final Outcome</h2>
-        <p>Notion Study is a simplified sister application designed to eliminate the "productivity theater" often associated with feature-heavy tools. By applying a subtraction-based design philosophy, the app removes the distracting customization options of the main Notion platform, allowing college students to transition from over-planning to meaningful task execution.</p>
-        <p>Core Features & Design Logic
-The final high-fidelity prototype, developed in Figma, centers on three primary pillars to reduce cognitive overload:
-
-Simplified Task Management: The interface is stripped of aesthetic complexity, offering only essential Daily, Weekly, and Monthly views. This reduces "decision fatigue" by presenting tasks in a clean, non-customizable format that prevents users from wasting time on system design.
-
-Integrated Focus Continuity: A prominent Pomodoro focus timer is built directly into the task list. By connecting the timer to specific tasks, the app encourages "flow state" and ensures that the act of tracking time is tethered to actual progress rather than just "being busy".
-
-Platform Integration with Minimalist Constraints: While the app syncs with the user's existing Notion data to ensure continuity, it operates as a minimalist standalone environment. It eliminates the "visual clutter" and complex templates that typically lead to procrastination under the guise of preparation.
-
-Validation & Performance
-The effectiveness of this "less is more" approach was confirmed through usability testing with college students:
-
-High Efficiency: Users were able to navigate the interface and complete task-planning scenarios in an average of 38 seconds.
-
-Reduced Cognitive Load: Feedback indicated that the subtraction of features successfully reestablished productivity as a process focused on task completion rather than aesthetic optimization.</p>
+        <div class="outcome-content">
+            <p>Notion Study is a simplified sister application designed to eliminate the "productivity theater" often associated with feature-heavy tools. By applying a subtraction-based design philosophy, the app removes the distracting customization options of the main Notion platform, allowing college students to transition from over-planning to meaningful task execution.</p>
+            
+            <h3>Core Features & Design Logic</h3>
+            <p>The final high-fidelity prototype, developed in Figma, centers on three primary pillars to reduce cognitive overload:</p>
+            
+            <p><strong>Simplified Task Management:</strong> The interface is stripped of aesthetic complexity, offering only essential Daily, Weekly, and Monthly views. This reduces "decision fatigue" by presenting tasks in a clean, non-customizable format that prevents users from wasting time on system design.</p>
+            
+            <p><strong>Integrated Focus Continuity:</strong> A prominent Pomodoro focus timer is built directly into the task list. By connecting the timer to specific tasks, the app encourages "flow state" and ensures that the act of tracking time is tethered to actual progress rather than just "being busy".</p>
+            
+            <p><strong>Platform Integration with Minimalist Constraints:</strong> While the app syncs with the user's existing Notion data to ensure continuity, it operates as a minimalist standalone environment. It eliminates the "visual clutter" and complex templates that typically lead to procrastination under the guise of preparation.</p>
+            
+            <h3>Validation & Performance</h3>
+            <p>The effectiveness of this "less is more" approach was confirmed through usability testing with college students:</p>
+            
+            <p><strong>High Efficiency:</strong> Users were able to navigate the interface and complete task-planning scenarios in an average of 38 seconds.</p>
+            
+            <p><strong>Reduced Cognitive Load:</strong> Feedback indicated that the subtraction of features successfully reestablished productivity as a process focused on task completion rather than aesthetic optimization.</p>
+        </div>
+        
         <a href="assets/Group2_Project1_Documentation.pdf" target="_blank" class="case-btn">View Full Project Documentation</a>
     </section>
 
