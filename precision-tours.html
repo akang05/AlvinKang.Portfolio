@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | Precision Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Consistent Portfolio Layout Styles */
+        body { line-height: 1.7; color: #2d3436; background-color: #ffffff; }
+        .case-study-container { max-width: 850px; margin: 0 auto; padding: 60px 24px; }
+        .case-header { margin-bottom: 80px; text-align: left; }
+        .case-header h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.02em; }
+        .project-meta { font-size: 1rem; color: #636e72; font-weight: 400; }
+        .case-section { margin-bottom: 80px; }
+        .case-section h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: #b2bec3; margin-bottom: 30px; border-bottom: 1px solid #dfe6e9; padding-bottom: 10px; }
+        .process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+        .process-item h3 { font-size: 1.2rem; margin-bottom: 15px; font-weight: 600; }
+        .case-image { width: 100%; height: auto; border-radius: 12px; margin: 20px 0; border: 1px solid #eee; }
+        .highlight { background-color: #f9f9fb; padding: 50px; border-radius: 24px; text-align: center; }
+        .highlight blockquote { font-size: 1.8rem; font-weight: 600; font-style: italic; color: #e67e22; margin-bottom: 20px; border: none; padding: 0; }
+        .outcome-content h3 { font-size: 1.3rem; margin: 40px 0 15px 0; color: #2d3436; }
+        .case-btn { display: inline-block; background: #2d3436; color: #fff; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; margin-top: 30px; transition: 0.2s ease; }
+        .case-btn:hover { transform: translateY(-3px); background: #000; }
+        @media (max-width: 768px) { .case-header h1 { font-size: 2.2rem; } .process-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo"><strong>alvinkang</strong></div>
+    <div class="nav-links"><a href="projects.html">← Back to Projects</a></div>
+</nav>
+
+<main class="case-study-container">
+    <header class="case-header">
+        <h1>Precision Tours: Campus Navigation Usability</h1>
+        <p class="project-meta">March 2026 – April 2026 | Purdue University</p>
+    </header>
+
+    <section class="case-section">
+        <h2>Project Overview</h2>
+        <p>This study evaluates the Purdue University campus tour experience, specifically focusing on how prospective students and visitors navigate physical environments using digital aids. The goal was to identify "dead zones" in navigation—moments where the digital instructions failed to align with the physical landmarks—leading to user frustration and lost time.</p>
+    </section>
+
+    <section class="case-section">
+        <h2>Problem / Design Challenge</h2>
+        <p>Campus tours often rely on a mix of static maps and GPS-based mobile apps. However, GPS drift and "hidden" building entrances create significant cognitive load for first-time visitors. Users spent more time looking at their phones than observing the campus architecture, defeating the purpose of an immersive tour.</p>
+    </section>
+
+    <section class="case-section">
+        <h2>Your Role & Contribution</h2>
+        <p>I served as the <strong>Lead UX Researcher</strong> for this usability study. I designed the research protocol, conducted the cognitive walkthroughs, and performed a comprehensive analysis of key usability issues. I was responsible for documenting the "path of least resistance" and suggesting architectural cues to improve digital-to-physical handoffs.</p>
+    </section>
+
+    <section class="case-section">
+        <h2>Process & Supporting Evidence</h2>
+        <div class="process-grid">
+            <div class="process-item">
+                <h3>Cognitive Walkthrough</h3>
+                <p>I performed a series of walkthroughs simulating a "lost student" persona. This allowed me to pinpoint exactly where the digital map's perspective lacked necessary environmental context, such as construction detours or non-intuitive building labels.</p>
+            </div>
+            <div class="process-item">
+                <h3>Usability Testing</h3>
+                <p>I moderated testing sessions where participants navigated from the Purdue Memorial Union to the Polytechnic Institute. I utilized the <strong>Think-Aloud Protocol</strong> to capture real-time feedback on their confusion and successes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-section highlight">
+        <h2>Key Insight & Turning Point</h2>
+        <blockquote>
+            "Users don't navigate by distance; they navigate by distinct visual anchors."
+        </blockquote>
+        <p>The turning point was realizing that "Turn left in 200 feet" was useless on a campus with diagonal paths. Users needed visual confirmation—like "Turn left at the bell tower"—to feel confident in their route.</p>
+    </section>
+
+    <section class="case-section">
+        <h2>Final Outcome</h2>
+        <div class="outcome-content">
+            <p>The study culminated in a redesigned navigation framework that prioritizes Landmark-Based Guidance. By integrating identifiable campus features into the digital interface, we reduced the time spent "searching for the path" by nearly 40%.</p>
+            
+            <img src="assets/tour_analysis.jpg" alt="Campus Tour Usability Analysis" class="case-image">
+
+            <h3>Core Findings & Design Logic</h3>
+            <p><strong>Landmark Integration:</strong> The redesign replaces distance-based instructions with landmark cues, using recognizable statues and building colors as primary navigation anchors.</p>
+            
+            <p><strong>Contextual Detours:</strong> A dynamic update system was proposed to account for the frequent construction on campus, providing "alternate path" notifications before the user enters a restricted area.</p>
+            
+            <h3>Validation & Performance</h3>
+            <p><strong>Reduced Cognitive Load:</strong> Post-test surveys indicated a 50% decrease in "navigation anxiety," with users reporting they felt more connected to the campus environment during the tour.</p>
+        </div>
+        
+        <a href="assets/Precision_Tours_Full_Report.pdf" target="_blank" class="case-btn">View Full Usability Report</a>
+    </section>
+
+    <section class="case-section reflection">
+        <h2>Reflection</h2>
+        <p>This project emphasized the importance of <strong>environmental UX</strong>. It taught me that digital design does not exist in a vacuum; it must be deeply integrated with the physical world to be truly effective. I now approach every project by asking how the user's physical surroundings impact their digital interactions.</p>
+    </section>
+</main>
+
+<div style="padding-bottom: 80px;"></div>
+
+</body>
+</html>
